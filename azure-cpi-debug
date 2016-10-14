@@ -1,0 +1,4 @@
+sed -i -e 's/bosh-init/BOSH_INIT_LOG_LEVEL=DEBUG bosh-init/' /home/tempest-web/tempest/web/app/models/deployer/executors/bosh_init_cli_executor.rb
+sed -i -e "s/'subscription_id'/'debug_mode' => true, 'subscription_id'/" /home/tempest-web/tempest/web/./app/models/tempest/manifests/bosh_init/azure_iaas_properties.rb
+service tempest-web stop
+service tempest-web start
